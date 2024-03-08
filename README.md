@@ -1,4 +1,4 @@
-# Vemto 3 Releases
+# Vemto 2 Releases
 
 Official repository for Vemto v2 Releases
 
