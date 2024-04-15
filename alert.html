@@ -6,20 +6,56 @@
             <a href="https://github.com/TiagoSilvaPereira/vemto2-issues/issues/new" class="text-red-500 cursor-pointer">Issues</a>
         </div>
     </div>
-    <h1 class="text-bold text-lg">Please, read this carefully!</h1>
     
     <br>
+
+    <span class="text-red-500 font-bold">Vemto 2.0.7 Notes - Pre-Alpha to Alpha</span>
+    <br><br>
+    Version 2.0.7 is essential because it allows us to finally leave the Pre-alpha state and officially enter the Alpha development cycle.
+    <br><br>
+    The most crucial change in this new version is the addition of the new database-based schema reader. Previous versions read Schema from migrations, but many projects have unconventional logic, which is why Vemto failed to read most of these projects.
+    <br><br>
+    With the new database-based reader, Vemto can always read the correct project structure, regardless of the logic found in the migrations (since Vemto first runs the migrations in a separate database and then reads the structure from that database).
+    <br><br>
+    Furthermore, this version comes with several other improvements:
+    <br><br>
+    <ol>
+        <li>Performance issues on macOS fixed</li>
+        <li>Now, Vemto detects if the project has missing dependencies before generating the code and suggests installing them. If you choose not to install them, Vemto will skip generating the files that depend on them.</li>
+        <li>An option to create a new project with Filament installed has been added</li>
+        <li>We resolved several bugs and made usability improvements in general</li>
+        <li>Considerable performance improvements</li>
+    </ol>
+    <br><br>
+    Now, starting with 2.0.7, we believe we will have enough space to work on bringing new features. Soon, we will have:
+    <br><br>
+    <ol>
+        <li>Better AI tools (We are cooking something extraordinary here)</li>
+        <li>API Endpoints + Tests</li>
+        <li>Templates Editor</li>
+    </ol>
+    <br><br>
+    <b>IMPORTANT:</b> starting with this version, we lock Vemto only to open Laravel 11 or higher projects. Supporting older versions of Laravel while fixing bugs and delivering improvements was becoming very complex. Additionally, we want to encourage upgrading to newer versions of Laravel, especially recent projects using Laravel 9 or 10, where the upgrade is not as impactful.
+    <br><br>
+    That said, Vemto is a better tool for new projects. Although the new architecture makes connecting existing projects possible, our primary focus is on creating new Laravel projects from scratch.
+    <br><br>
+
+    <hr>
+
     <span class="text-red-500 font-bold">Vemto 2.0.6 Notes</span>
     <br><br>
     Now you can create new projects with Jetstream or Breeze from the Vemto interface. Just click on the "New Project" button and select the desired option.
     <br><br>
+
+    <hr>
+
     Hello!
     <br><br>
     I can't express how happy I am that you're seeing this screen! 😊
     <br><br>
     It was a year and a half of development, full of ups and downs. I'll soon make a blog post telling everything about this period, but let's get to the point:
     <br><br>
-    <span class="text-red-500 font-bold">Vemto 2 is finally here </span>
+    <span>Vemto 2 is finally here </span>
     <br><br>
     It's still a pre-alpha version; of course, there will probably be bugs. But I'm happy because this version has the correct architecture, which has been rewritten several times during this period and will now only be improved (hopefully for the next 10 years).
     <br><br>
