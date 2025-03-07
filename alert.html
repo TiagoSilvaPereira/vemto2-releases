@@ -7,128 +7,39 @@
         </div>
     </div>
     
-    <br><span class="text-red-500 font-bold">Vemto 2.1.0 Beta </span>
+    <br><span class="text-red-500 font-bold">Vemto 2.1.7 Beta - First 2025 version</span>
     <br><br>
-    Vemto now is Beta! Also, we added the ability to generate API Endpoints and Tests.
-    <br><br>
-    <hr>
-    <br><br>
-    <span class="text-red-500">Vemto 2.0.18 Alpha Notes - Important Version</span>
-    <br><br>
-    This new version fixes recent critical bugs and brings several improvements to Vemto. Also, we finally have a pretty performant Schema Editor and Code Queue.
-    <br><br>
-    <b class="text-red-500">IMPORTANT:</b> this is an essential version with big improvements and fixes. If your Vemto is not updating automatically, it is highly recommended to download the new version from the website.
-    <br><br>
-    <span class="text-red-500 font-bold">Vemto 2.0.17 Alpha Notes - Fixes</span>
-    <br><br>
-    Version 2.0.17 fixes bugs introduced in the previous version (code generation incorrectly deleting files and reactivity issues).
-    <br><br>
-    <span class="text-red-500 font-bold">Vemto 2.0.16 Alpha Notes - Massive improvements</span>
-    <br><br>
-    Version 2.0.15 and 2.0.16 brings several improvements to Vemto, making it more stable and reliable. The most significant changes are:
-    <br><br>
-    <div>
-        <ol style="list-style-type: decimal;" class="px-5">
-            <li>Massive improvements in Schema performance</li>
-            <li>Fixing critical bugs on Schema Editor</li>
-            <li>Fixing critical bugs on migrations generation</li>
-            <li>Fix to show PHP errors correctly</li>
-            <li>Other fixes and improvements</li>
-            <li>One step closer to the Beta version!</li>
-        </ol>
-    </div>
-    <br><br>
-    <b class="text-red-500">ATTENTION:</b> Please check if you are receiving our emails from contact@vemto.app. If you are not, please check your spam folder and mark it as not spam. We are sending important information about Vemto, and we don't want you to miss it.
+    <b class="text-red-500">IMPORTANT:</b> this is an essential version with important improvements and bug fixes. If your Vemto executable is not updating automatically, it is highly recommended to download the new version from the website.
     <br><br>
     <hr>
     <br><br>
-    <span class="text-red-500 font-bold">Vemto 2.0.7 Notes - Pre-Alpha to Alpha</span>
+    <span class="text-red-500 font-bold">Blueprint Mode</span>
     <br><br>
-    Version 2.0.7 is essential because it allows us to finally leave the Pre-alpha state and officially enter the Alpha development cycle.
+    Vemto now has a new project mode called Blueprint Mode, which is default when creating new projects. In this mode, Vemto only synchronizes with the application's source code on the first connection, or if you explicitly request it (using the "Sync Schema" option in the Schema Designer).
     <br><br>
-    The most crucial change in this new version is the <span class="text-red-500">addition of the new database-based schema reader</span>. Previous versions read Schema from migrations, but many projects have unconventional logic, which is why Vemto failed to read most of these projects.
-    <br><br>
-    With the new database-based reader, Vemto can always read the correct project structure, regardless of the logic found in the migrations (since Vemto first runs the migrations in a separate database and then reads the structure from that database).
-    <br><br>
-    Furthermore, this version comes with several other improvements:
-    <br><br>
-    <div>
-        <ol style="list-style-type: decimal;" class="px-5">
-            <li>Performance issues on macOS fixed</li>
-            <li>Now, Vemto detects if the project has missing dependencies before generating the code and suggests installing them. If you choose not to install them, Vemto will skip generating the files that depend on them.</li>
-            <li>An option to create a new project with Filament installed has been added</li>
-            <li>We resolved several bugs and made usability improvements in general</li>
-            <li>Considerable performance improvements</li>
-        </ol>
-    </div>
-    <br><br>
-    Starting with 2.0.7, we believe we will have enough stability to bring new features. Soon, we will have:
-    <br><br>
-    <div>
-        <ol style="list-style-type: decimal;" class="px-5">
-            <li>Better AI tools (We are cooking something extraordinary here)</li>
-            <li>API Endpoints + Tests</li>
-            <li>Templates Editor</li>
-        </ol>
-    </div>
-    <br><br>
-    <b>IMPORTANT:</b> starting with this version, we lock Vemto only to open Laravel 11 or higher projects. Supporting older versions of Laravel while fixing bugs and delivering improvements was becoming very complex. Additionally, we want to encourage upgrading to newer versions of Laravel, especially recent projects using Laravel 9 or 10, where the upgrade is not as impactful.
-    <br><br>
-    That said, Vemto is a better tool for new projects. Although the new architecture makes connecting existing projects possible, our primary focus is on creating new Laravel projects from scratch.
+    <b>We strongly recommend using this mode for new projects</b>, as it is much faster and ignores errors in the source code (so that, Vemto can generate code and save migrations even if the application's source code has errors or is incompatible with Vemto).
     <br><br>
 
-    <hr>
+    <span class="text-red-500 font-bold">Templates Editor</span>
+    <br><br>
+    The Templates Editor is finally available in this version. You can now edit the templates used by Vemto to generate code and migrations. 
+    Now, Vemto will create a .vemto/templates/published and a .vemto/templates/custom folder in your project. The first one contains the templates that come with Vemto, and the second one contains the templates that you can edit (and that will override the default ones).
     <br><br>
 
-    <span class="text-red-500 font-bold">Vemto 2.0.6 Notes</span>
+    <span class="text-red-500 font-bold">Migrations Schema Reader - deprecated</span>
     <br><br>
-    Now you can create new projects with Jetstream or Breeze from the Vemto interface. Just click on the "New Project" button and select the desired option.
-    <br><br>
-
-    <hr>
+    The Migrations Schema Reader is deprecated and will keep working only with Laravel 11 projects (not available for Laravel 12+ projects). This Reader was createad just for development purposes, and with the Database Schema Reader and the Blueprint Mode, it is no longer necessary. This also makes it more easy to maintain and improve Vemto, as we now have only one Schema Reader to maintain.
     <br><br>
 
-    Hello!
+    <span class="text-red-500 font-bold">Pages Creator/Editor - deprecated</span>
     <br><br>
-    I can't express how happy I am that you're seeing this screen! 😊
+    The Pages Creator/Editor is deprecated and will keep working only with old Vemto projects. This was an experimental feature and we decided to remove it to reduce the complexity of the Vemto's scope.
     <br><br>
-    It was a year and a half of development, full of ups and downs. I'll soon make a blog post telling everything about this period, but let's get to the point:
+
+    <span class="text-red-500 font-bold">What about Laravel 12 support?</span>
     <br><br>
-    <span>Vemto 2 is finally here </span>
-    <br><br>
-    It's still a pre-alpha version; of course, there will probably be bugs. But I'm happy because this version has the correct architecture, which has been rewritten several times during this period and will now only be improved (hopefully for the next 10 years).
-    <br><br>
-    I recommend using it cautiously (always commit your code before connecting it to Vemto). It's essential to consider a few things now:
-    <br><br>
-    1 - Vemto 2 requires at least basic knowledge of Laravel and PHP. At least for now, we have decided not to do basic things like creating a new project, installing composer packages, etc. Vemto now assumes that you know how to do these things and focuses on the most crucial thing, visualizing and generating code. However, we will soon have tools to take care of these parts correctly (Composer Manager, Project Creator, etc.)
-    <br><br>
-    2 - Unlike version 1, Vemto is now not just a boilerplate tool. It connects directly to your project and creates a .vemto folder inside it (you can put this folder in .gitigore if you wish, but be sure to back it up, as it represents your project)
-    <br><br>
-    3 - Vemto can read any project with a .vemto folder. If you upload your project to another computer (using GIT or manually) with this folder inside, Vemto can open it normally. This means there is no need to export projects.
-    <br><br>
-    4 - When Vemto 2 generates code, it does just that. It does not install packages or modify composer.json or package.json during generation. This was a significant source of problems in version 1, and we found another way to do this, which will be implemented soon (Composer Manager, NPM Manager, etc.)
-    <br><br>
-    5 - Some features from Vemto 1 are still under development as we needed to resolve the entire architecture before bringing them, which took almost the whole development period. Now, we are focused on these features, and soon, we will have:
-    <br><br>
-    <ul>
-        <li>- Generation of API Endpoints</li>
-        <li>- Template Editor</li>
-        <li>- Tests Generation</li>
-        <li>- Plugin support</li>
-        <li>- More AI features</li>
-    </ul>
-    <br><br>
-    6 - You may prefer to create your Laravel project with Jetstream/Livewire for CRUD generation. Any other boilerplate with Livewire will work (Breeze, Laravel UI, etc), but we haven't created the menu file yet, so you'll probably have to edit it manually
-    <br><br>
-    7 - Vemto 1 still works very well for generating API Endpoints. You can use it for this and connect Vemto 2 to your project.
-    <br><br>
-    8 - Small Tip: Test Filament code generation—it's awesome now! Just remember to install the Filament package in your project.
-    <br><br>
-    9 - Please report any bug in the <a href="https://github.com/TiagoSilvaPereira/vemto2-issues/issues/new" class="text-red-500 cursor-pointer">Issues Repository</a> or email <b>contact@vemto.app</b> (Issues repository is preferred).
-    <br><br>
-    We are focused on improving Vemto 2 and reaching the Release version as quickly as possible (our plans are for the middle of the year).
-    <br><br>
-    I am immensely grateful to everyone who believed in and supported me, even when I was unable to release any more Vemto updates.
+    We are working hard to support Laravel 12 in the next version of Vemto. Our original plan was to launch L12 support in this version, but we noticed some issues when reading the database schema, and we decided to postpone it to the next version.
+
     <br><br>
     Thank you for your attention and support! 
     <br><br>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+
+  <script>
+    // read /alert.html with ajax and insert it into the body
+    fetch('/alert.html')
+      .then(response => response.text())
+      .then(data => document.body.innerHTML = data)
+  </script>
+
+  <body class="h-screen w-full">
+    
+  </body>
+</html>
